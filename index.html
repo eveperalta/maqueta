@@ -18,6 +18,16 @@
         <div class=" col s5 offset-s7 col m6">
           <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
         </div>
+        <div>
+          <a class="waves-effect waves-light btn" onclick="myFunction()">Crea un usuario</a>
+        </div>
+        <div class="col s12 colm6" id="user">
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+          <a class="waves-effect waves-light btn" onclick="">Submit</a>
+        </div>
+        </div>
       </div>
     </div>
 
@@ -35,9 +45,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
-
-</script>
+<script type="text/javascript" src="src/js/base.js"></script>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
