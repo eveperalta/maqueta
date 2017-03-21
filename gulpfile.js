@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 });
 
 // Concatenar & Minify JS
-gulp.task('script', function() {
+gulp.task('scripts', function() {
     return gulp.src('src/js/*.js')
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
