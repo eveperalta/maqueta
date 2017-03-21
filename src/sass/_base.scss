@@ -8,28 +8,7 @@ $nav-color: #DD0021;
   color: #000;
   margin-bottom: 180px;
 }
-#barra{
-  margin-bottom: 150px;
-}
-.nav{
-  color: $nav-color;
-}
-.hoverable{
-  width: 20%;
-  margin-bottom: 10px;
-}
-.spaces{
-  position: relative;
-  left: 120px;
-  top: -65px;
-}
-.spaces2{
-  position: relative;
-  left: 30px;
-  top: -70px;
-  display: none;
-}
-
-.spaces3{
- @extend .spaces2
+#buton1{
+  font-size: 16px;
+  font-weight: bold;
 }
