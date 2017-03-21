@@ -32,14 +32,16 @@
   <div class="row">
     <div class="col s12 m12">
       <a class="waves-effect waves-light btn-large"  onclick="myFloors()">Pisos</a>
-      <div id="piso" class="spaces">
+      <div id="piso" class="spaces hidden">
         <ul>
-          <li class="hoverable" onclick="mySpaces()"><a href="#">Interior</a></li>
-          <li class="hoverable"  onclick="mySpacesOut()"><a href="#">Exterior</a></li>
+          <li class="hoverable"  onclick="mySpaces()"><a href="#">Interior</a></li>
+          <li class="hoverable"   onclick="mySpacesOut()"><a href="#">Exterior</a></li>
         </ul>
       </div>
     </div>
-    <div class="spaces2" hidden="hidden" id="spaces2">
+  </div>
+  <div class="row">
+    <div class="spaces2"  id="spaces2">
       <div class="input-field col s5">
         <select>
           <option value="" disabled selected></option>
@@ -50,7 +52,7 @@
         <label>Elija un espacio</label>
       </div>
     </div>
-    <div class="spaces3" hidden="hidden" id="spaces3">
+    <div class="spaces3"  id="spaces3">
       <div class="input-field col s5">
         <select>
           <option value="" disabled selected></option>
@@ -74,7 +76,9 @@
     </div>
     </div>
   </div>
-</div>
+
+
+
 
 
 
