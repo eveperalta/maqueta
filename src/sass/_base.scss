@@ -15,7 +15,7 @@ $nav-color: #DD0021;
   color: $nav-color;
 }
 .hoverable{
-  width: 10%;
+  width: 20%;
   margin-bottom: 10px;
 }
 .spaces{
@@ -25,13 +25,11 @@ $nav-color: #DD0021;
 }
 .spaces2{
   position: relative;
-  left: 230px;
+  left: 200px;
   top: -145px;
   display: none;
 }
-.highlight{
-  width: 10%;
-}
+
 .spaces3{
  @extend .spaces2
 }

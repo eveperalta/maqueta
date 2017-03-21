@@ -23,7 +23,7 @@ function mySpaces() { //pisos espacios internos
         x.style.display = 'none';
     }
 }
-function mySpacesOut() { //pisos espacios internos
+function mySpacesOut() { //pisos espacios externos
     var x = document.getElementById('spaces3');
     if (x.style.display === 'none') {
         x.style.display = 'block';
@@ -31,6 +31,10 @@ function mySpacesOut() { //pisos espacios internos
         x.style.display = 'none';
     }
 }
+//select
+$(document).ready(function() {
+   $('select').material_select();
+ });
  //dropdown menu
  $( document ).ready(function(){
      $(".dropdown-button").dropdown();
