@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="stylesheet" href="src/css/colorPicker.css">
   </head>
   <body>
 <header>
@@ -33,7 +34,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="input-field col s6 m6">
+    <div class="input-field col s3 m3">
       <select>
         <option value="" disabled selected></option>
         <option value="1">Cocina</option>
@@ -46,12 +47,16 @@
     <div class="input-field col s3 m3">
       <select>
         <option value="" disabled selected></option>
-        <option value="1">Pintura</option>
         <option value="2">Cerámica</option>
         <option value="3">Papel Mural</option>
       </select>
       <label>Tipo de Decoracion</label>
     </div>
+    <div class="input-field col s6">
+      <input type="text" id="bau" onclick="startColorPicker(this)" onkeyup="maskedHex(this)">
+      <label for="first_name">Pinturas</label>
+    </div>
+</div>
   <div class="row"><!--slider y modal-->
     <div class="spaces3"  id="spaces3">
       <div class="carousel">
@@ -97,6 +102,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="src/js/base.js"></script>
+    <script type="text/javascript" src="src/js/colorPicker.js">
+
+    </script>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
