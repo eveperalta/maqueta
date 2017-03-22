@@ -47,11 +47,11 @@ header{ //espacios
   margin-left: 10px;
 }
 .power{
-  margin-top: -40px;
+  margin-top: -65px;
 }
 .cart{
   position: relative;
-  left: 320px;
+  left: 140px;
   bottom: -12px;
 }
 .options {
@@ -60,4 +60,7 @@ header{ //espacios
 .selection{
   @extend .options;
   margin: 10px;
+}
+.carousel-item{
+  width: 250px;
 }
