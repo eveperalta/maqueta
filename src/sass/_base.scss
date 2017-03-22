@@ -26,8 +26,8 @@ form{//formulario email
 }
 header{ //espacios
   background-color: $nav-color;
-  margin-bottom: 100px;
-  height: 50px;
+  margin-bottom: 50px;
+  height: 60px;
 }
 .button-collapse{
   color: $collapse-color;
@@ -63,4 +63,23 @@ header{ //espacios
 }
 .carousel-item{
   width: 250px;
+}
+.listPic{
+  img{
+    width: 90px;
+    height: 90px;
+  }
+}
+.listProd{
+  position: relative;
+  left: 20px;
+  top: -15px;
+}
+
+.list{
+  margin-top:  -20px;
+}
+.title{
+  margin-top: -20px;
+  text-align: center;
 }

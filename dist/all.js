@@ -38,7 +38,7 @@ $(document).ready(function() {//initialize select
 //
 // The above copyright notice and this permission notice shall be
 // included in all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -55,8 +55,8 @@ var HUE_SLIDER_LOCATION = 'images/h.png';
 var HUE_SLIDER_ARROWS_LOCATION = 'images/position.png';
 var SAT_VAL_SQUARE_LOCATION = 'images/sv.png';
 var BUTON_CLOSE_LOCATION='images/close.jpg';
-var HEIGHT_OF_OBJ=25;//manualy move the the color picker top or botom
-var WIDTH_OF_OBJ=150; //manualy move the color picker left or right
+var HEIGHT_OF_OBJ=-5;//manualy move the the color picker top or botom
+var WIDTH_OF_OBJ=-50; //manualy move the color picker left or right
 
 // Here are some boring utility functions. The real code comes later.
 var is_div_init=false;
@@ -71,7 +71,7 @@ function hexToRgb(hex_string, default_)
     {
         hex_string = hex_string.substr(1);
     }
-    
+
     var r;
     var g;
     var b;
@@ -94,7 +94,7 @@ function hexToRgb(hex_string, default_)
     {
         return default_;
     }
-    
+
     r = parseInt(r, 16);
     g = parseInt(g, 16);
     b = parseInt(b, 16);
@@ -117,7 +117,7 @@ function rgbToHex(r, g, b, includeHash)
     {
         includeHash = true;
     }
-    
+
     r = r.toString(16);
     if (r.length == 1)
     {
@@ -141,7 +141,7 @@ var version = parseFloat(arVersion[1]);
 
 function fixPNG(myImage)
 {
-    if ((version >= 5.5) && (version < 7) && (document.body.filters)) 
+    if ((version >= 5.5) && (version < 7) && (document.body.filters))
     {
         var node = document.createElement('span');
         node.id = myImage.id;
@@ -247,7 +247,7 @@ function removeEventListenerIndex(index)
 {
     var eventListener = eventListeners[index];
     delete eventListeners[index];
-    
+
     if (!eventListener.node.removeEventListener)
     {
         eventListener.node.detachEvent('on' + eventListener.event,
@@ -293,7 +293,7 @@ myAddEventListener(window, 'unload', cleanupEventListeners);
 //
 // The above copyright notice and this permission notice shall be
 // included in all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -432,12 +432,12 @@ buttonCloseImg.onclick=hideColorPicker;
 function makeColorSelector(inputBox)
 {
     var rgb, hsv
-    
+
     function colorChanged()
     {
 		is_div_init=false;
         var hex = rgbToHex(rgb.r, rgb.g, rgb.b);
-		
+
         var hueRgb = hsvToRgb(hsv.h, 1, 1);
         var hueHex = rgbToHex(hueRgb.r, hueRgb.g, hueRgb.b);
 		//alert(hex);
@@ -447,8 +447,8 @@ function makeColorSelector(inputBox)
 		if(((rgb.r*100+rgb.g*100+rgb.b*100)/3)<65) //change text color to white if the background color is to dark
 	inputBox.style.color="#fff";
 		else inputBox.style.color="#000";
-			
-		
+
+
         satValDiv.style.background = hueHex;
         crossHairs.style.left = ((hsv.v*199)-10).toString() + 'px';
        crossHairs.style.top = (((1-hsv.s)*199)-10).toString() + 'px';
@@ -465,7 +465,7 @@ function makeColorSelector(inputBox)
         rgb = hsvToRgb(hsv.h, hsv.s, hsv.v);
         colorChanged();
     }
-    
+
     var colorSelectorDiv = document.createElement('div');
     colorSelectorDiv.style.paddingLeft = '5px';
 	    colorSelectorDiv.style.paddingRight = '5px';
@@ -474,9 +474,9 @@ function makeColorSelector(inputBox)
 	colorSelectorDiv.style.diplay="inline";
    colorSelectorDiv.style.height = '220px';
     colorSelectorDiv.style.width = '210px';
-	
+
  var butonclose = document.createElement('div');
- 
+
     butonclose.style.position = 'relative';
 	butonclose.style.diplay="inline";
    butonclose.style.height = '10px';
@@ -503,7 +503,7 @@ colorSelectorDiv.appendChild(butonclose);
         hsvChanged();
     }
     trackDrag(satValDiv, satValDragged)
-	  
+
     colorSelectorDiv.appendChild(satValDiv);
 
     var hueDiv = document.createElement('div');
@@ -531,23 +531,23 @@ colorSelectorDiv.appendChild(butonclose);
         rgbChanged();
     }
     myAddEventListener(inputBox, 'change', inputBoxChanged);
-  
+
     inputBoxChanged();
-    
+
     return colorSelectorDiv;
 }
 
 
 function colorPickerGetTopPos(inputObj)
 	{
-		
+
 	  var returnValue = inputObj.offsetTop;
 	  while((inputObj = inputObj.offsetParent) != null){
 	  	returnValue += inputObj.offsetTop;
 	  }
 	  return returnValue-HEIGHT_OF_OBJ;
 	}
-	
+
 	function colorPickerGetLeftPos(inputObj)
 	{
 	  var returnValue = inputObj.offsetLeft;
@@ -564,13 +564,13 @@ function startColorPicker(inputObj)
 	   color_picker_div.style.top = colorPickerGetTopPos(inputObj) + inputObj.offsetHeight + 2 + 'px';
 	   color_picker_div.id = 'The_colorPicker';
 	   color_picker_div.style.display='block';
-	   color_picker_div.appendChild(makeColorSelector(inputObj));	
+	   color_picker_div.appendChild(makeColorSelector(inputObj));
 	   document.body.appendChild(color_picker_div);
 	   is_div_init=true;
 }
 function hideColorPicker()
 {
-	
+
 	if (is_div_init){
 		 is_div_init=false;
 		  document.body.removeChild(document.getElementById('The_colorPicker'));
