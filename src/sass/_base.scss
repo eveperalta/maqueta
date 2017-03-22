@@ -1,24 +1,63 @@
 //variables
-$nav-color: #DD0021;
+$nav-color: #005DAD;
+$collapse-color: #fff;
+$margin-top: 20px;
 .master{ //first page subtitle
   font-family: 'BenchNine', sans-serif;
-  font-size: 62px;
+  font-size: 58px;
   margin-top: 150px;
   text-align: center;
   color: #000;
-  margin-bottom: 180px;
+  margin-bottom: 160px;
 }
 #buton1{ //boton inicio de sesion
   font-size: 16px;
   font-weight: bold;
 }
 form{//formulario email
-  margin-top: 20px;
+  margin-top: $margin-top;
 }
 .back{ //boton de retorno a inicio
-  font-size: 10px;
-  margin-top: auto;
+  font-size: 14px;
+  margin-top: $margin-top;
 }
 #test{
   margin-left: 40px;
+}
+header{ //espacios
+  background-color: $nav-color;
+  margin-bottom: 100px;
+  height: 50px;
+}
+.button-collapse{
+  color: $collapse-color;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+.left{
+  img{
+    width:75%;
+    height: 75%;
+    margin-top: $margin-top;
+    margin-bottom: $margin-top;
+  }
+}
+.description{//modal descripcion de productos
+  margin-left: 10px;
+}
+.power{
+  margin-top: -40px;
+}
+.cart{
+  position: relative;
+  left: 320px;
+  bottom: -12px;
+}
+.options {
+  background-color: $nav-color;
+}
+.selection{
+  @extend .options;
+  margin: 10px;
 }

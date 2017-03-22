@@ -12,3 +12,15 @@
  );
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   $('.collapsible').collapsible();
+
+$(document).ready(function() {//initialize select
+    $('select').material_select();
+  });
+
+/*  $(document).ready(function(){
+    $("#button1").on("click",function(){
+      $("#button2").hide();
+    });
+  });*/
+  $('.carousel').carousel();
+  $('.modal').modal();

@@ -5,13 +5,18 @@
  // Initialize collapse button
  $('.button-collapse').sideNav({
      menuWidth: 250, // Default is 300
-     edge: 'right', // Choose the horizontal origin
+     edge: 'left', // Choose the horizontal origin
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
      draggable: true // Choose whether you can drag to open on touch screens
    }
  );
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   $('.collapsible').collapsible();
+$(document).ready(function(){
+  $("#button1").on("click",function(){
+    $("#button2").hide();
+  });
+});
 
 /*!
  * Materialize v0.98.0 (http://materializecss.com)
