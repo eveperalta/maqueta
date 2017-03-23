@@ -59,7 +59,7 @@ header{ //espacios
 }
 .cart{
   position: relative;
-  left: 140px;
+  left: 90px;
   bottom: -12px;
 }
 .options {
@@ -90,4 +90,12 @@ header{ //espacios
 .title{
   margin-top: -20px;
   text-align: center;
+}
+.power2{
+  position: relative;
+  bottom: -12px;
+}
+.call{
+  z-index: 200;
+  margin-top: -160px;
 }
